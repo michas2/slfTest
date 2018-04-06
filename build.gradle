@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.gradle.java.experimental-jigsaw' version '0.1.1'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.8.0-beta1'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.8.0-beta1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+javaModule.name = 'slfTest'
+mainClassName = 'slfTest.Main'
